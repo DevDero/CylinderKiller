@@ -19,6 +19,7 @@ public class Road : MonoBehaviour
 
     private void Awake()
     {
+        
         roadChannels = new GameObject[3];
         spawnLocations = new GameObject[5];
     }
@@ -43,4 +44,7 @@ public class Road : MonoBehaviour
         gameObject.transform.position = new Vector3(0, 0, (roadNumber * roadDistance + EmptyCount * emptyDistance));
 
     }
+
+  
+    
 }

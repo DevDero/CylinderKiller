@@ -30,6 +30,8 @@ public class LevelManager : MonoBehaviour
 
     public void GameOver()
     {
+        Time.timeScale = 0;
+        Pause();
 
     }
     public void ResetGame()
@@ -47,6 +49,12 @@ public class LevelManager : MonoBehaviour
     {
         Time.timeScale = 1;
         PausePanel.SetActive(false);
+
+    }
+    public void LevelComplete()
+    {
+       
+
 
     }
 

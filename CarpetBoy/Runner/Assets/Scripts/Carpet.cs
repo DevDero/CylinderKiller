@@ -16,6 +16,7 @@ public class Carpet : MonoBehaviour
         Debug.Log("used");
         gameObject.transform.parent = null;
         gameObject.transform.position = baby.carpetOpenPos.transform.position;
+        gameObject.transform.rotation = Quaternion.identity;
         carpetBoxCol.enabled = true;
         animator.SetTrigger("Use");
 
@@ -30,6 +31,7 @@ public class Carpet : MonoBehaviour
         animator.SetTrigger("Catch");
 
         gameObject.transform.parent = baby.Backpack.transform;
+        gameObject.transform.localPosition = Vector3.zero;
 
     }
     private void OnTriggerEnter(Collider other)
